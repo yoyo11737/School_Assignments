@@ -1,10 +1,13 @@
 /****SAMPLE PROGRAM HEADER*******************************************************
-Lofton Bullard           Total Points:  100
+Dalton McClain           Total Points:  10
 Due Date:  8/30/18
 Course:  C0P3014
 Assignment:  Assignment 1
 Professor: Dr. Lofton Bullard
-Description: (Your program description goes here -- what is does--In the program we processed....
+Description: My program calculates the amount of money it costs to make a call, dependent on the amount of relays and the duration of the call.
+			 The program takes the users input and prints the calculations to the screen.
+			 I added a few functions to make the main function a little less overwhelmed, unnecessary but I felt up to the challenge.
+			 I added some graphics to make it more fun for the user to see and to direct the eyes to what I want the user to see.
 
 
 *************************************************************/
@@ -22,6 +25,9 @@ bool yesOrNo();
 
 //Calculate the tax rate 
 double taxRate(int relay);
+
+//Print the output to the screen
+void finalMessage(string cell, double relay, double length, double netCost, double tax, double totalCost);
 
 int main() {
 	//Variables
@@ -70,22 +76,10 @@ int main() {
 		call_tax = net_cost * taxRate(relays);
 		total_cost = net_cost + call_tax;
 
-		//make a box
-		cout << "=========================================\n";
-		cout << "================ OUTPUT =================" << endl;
-		cout << "=========================================\n";
+		//Output
+		finalMessage(cell_num, relays, call_length, net_cost, call_tax, total_cost);
 
-		//Output, could have made this a seperate function, but meh
-		cout << "=  Cell Phone #\t\t" << cell_num << "\t=" << endl;
-		cout << fixed << setprecision(0) << "=  Number of Relays\t" << relays << "\t\t=" << endl;
-		cout << fixed << setprecision(0) << "=  Minutes used\t\t" << call_length << "\t\t=" << endl;
-		cout << fixed << setprecision(2) << "=  Net Cost\t\t$" << net_cost << "\t\t=" << endl;
-		cout << fixed << setprecision(2) << "=  Call Tax\t\t$" << call_tax << "\t\t=" << endl;
-		cout << fixed << setprecision(2) << "=  Total Cost\t\t$" << total_cost << "\t\t=" << endl;
-
-		//Finish box
-		cout << "=========================================\n";
-		cout << "=========================================\n\n";
+		
 	} while (yesOrNo());//I call the yesOrNo function to check if the user wants to do another calculation
 						//I kept it out of the main code because why not, when I got to the output I got bored
 
@@ -135,6 +129,26 @@ double taxRate(int relay)
 	else if (relay > 50) {
 		return .12;
 	}
+}
+
+//Print the output to the screen
+void finalMessage(string cell, double relay, double length, double netCost, double tax, double totalCost)
+{
+	//Make a box
+	cout << "=========================================\n";
+	cout << "================ OUTPUT =================" << endl;
+	cout << "=========================================\n";
+	
+	cout << "=  Cell Phone #\t\t" << cell << "\t=" << endl;
+	cout << fixed << setprecision(0) << "=  Number of Relays\t" << relay << "\t\t=" << endl;
+	cout << fixed << setprecision(0) << "=  Minutes used\t\t" << length << "\t\t=" << endl;
+	cout << fixed << setprecision(2) << "=  Net Cost\t\t$" << netCost << "\t\t=" << endl;
+	cout << fixed << setprecision(2) << "=  Call Tax\t\t$" << tax << "\t\t=" << endl;
+	cout << fixed << setprecision(2) << "=  Total Cost\t\t$" << totalCost << "\t\t=" << endl;
+
+	//Finish box
+	cout << "=========================================\n";
+	cout << "=========================================\n\n";
 }
 
 //I love comments, so fun!
