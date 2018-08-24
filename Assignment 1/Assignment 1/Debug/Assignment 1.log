@@ -1,4 +1,4 @@
 ﻿  cost_call_calculator.cpp
-c:\users\daltons laptop\desktop\school-\assignment 1\assignment 1\cost_call_calculator.cpp(40): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\daltons laptop\desktop\school-\assignment 1\assignment 1\cost_call_calculator.cpp(104): warning C4715: 'taxRate': not all control paths return a value
-  Assignment 1.vcxproj -> C:\Users\Daltons Laptop\Desktop\School-\Assignment 1\Debug\Assignment 1.exe
+c:\users\daltons laptop\desktop\school ssh\assignment 1\assignment 1\cost_call_calculator.cpp(70): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\daltons laptop\desktop\school ssh\assignment 1\assignment 1\cost_call_calculator.cpp(138): warning C4715: 'taxRate': not all control paths return a value
+  Assignment 1.vcxproj -> C:\Users\Daltons Laptop\Desktop\school ssh\Assignment 1\Debug\Assignment 1.exe
