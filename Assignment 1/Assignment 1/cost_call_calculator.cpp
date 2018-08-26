@@ -32,11 +32,7 @@ void finalMessage(string cell, double relay, double length, double netCost, doub
 int main() {
 	//Variables
 	string cell_num = "";
-	double relays = 0;
-	double call_length = 0;
-	double net_cost = 0;
-	double call_tax = 0;
-	double total_cost = 0;
+	double relays, call_length, net_cost, call_tax, total_cost = 0;
 
 	//This is to check the users input on the phone number to make sure they enter the correct number of digits
 	int cell_check = 0;
@@ -92,20 +88,30 @@ int main() {
 //Function for checking if user wants to run another calculation
 bool yesOrNo() {
 
+
+	//Variables
 	string userInput = "";
+	bool flag = true;
 
-	//Ask for user input
-	cout << "\n\nDo you want to make another calculation? (Y/N): ";
-	cin >> userInput;
-	cout << endl;
 
-	if (userInput == "Y" || userInput == "y") {
-		return true;
-	}
-	else {
-		return false;
-	}
+	do {
+		//Ask for user input
+		cout << "\n\nDo you want to make another calculation? (Y/N): ";
+		cin >> userInput;
+		cout << endl;
 
+		if (userInput == "Y" || userInput == "y") {
+			return true;
+			flag = false;
+		}
+		else if (userInput == "N" || userInput == "n") {
+			return false;
+			flag = false;
+		}
+		else {
+			cout << "\n\nYou need to type either Y or N . . .\n\n";
+		}
+	} while (flag);
 
 }
 
