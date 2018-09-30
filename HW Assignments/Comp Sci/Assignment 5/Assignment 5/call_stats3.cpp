@@ -1,3 +1,15 @@
+/*
+Name: Dalton McClain
+Course: COP3014
+Professor: Dr. Lofton Bullard
+Due Date: 9/27/18
+Total Points: 10
+Assignment #3: call_stats.cpp
+
+Description: This program is like that of assignment 3, where it reads values from a file and prints it to the console. This program also takes those values and prints 
+them to a seperate file.
+
+*/
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -17,8 +29,8 @@ public:
 };
 
 void Input(ifstream &, call_record &);
-void Output(const call_record &);
 void Process(call_record &);
+void Output(const call_record &, ofstream &);
 
 
 
@@ -30,8 +42,10 @@ int main() {
 	//File manipulation
 	call_record customer_record;
 	ifstream in;
+	ofstream myFile;
 
 	in.open("call_data.txt");
+	myFile.open("weekly_call_info.txt");
 
 	if (in.fail()) {
 		cout << "Input file did not open correctly" << endl;
@@ -41,11 +55,12 @@ int main() {
 		while (!in.eof()) {
 			Input(in, customer_record);
 			Process(customer_record);
-			Output(customer_record);
+			Output(customer_record, myFile);
 		}
 	}
 
 	in.close();
+	myFile.close();
 
 	return 0;
 
@@ -85,23 +100,7 @@ void Process(call_record & customer_record) {
 	customer_record.total_cost = customer_record.net_cost + customer_record.call_tax;
 }
 
-void Output(const call_record & customer_record) {
-	ofstream myFile("weekly_call_info.txt");
-	if (myFile.is_open()) {
-		
-		myFile << customer_record.cell_number << "\t";
-		myFile << fixed << setprecision(0) << customer_record.relays << "\t";
-		myFile << fixed << setprecision(0) << customer_record.call_length << "\t\t";
-		myFile << fixed << setprecision(2) << "$" << customer_record.net_cost << "\t\t";
-		myFile << fixed << setprecision(2) << "$" << customer_record.tax_rate << "\t\t";
-		myFile << fixed << setprecision(2) << "$" << customer_record.call_tax << "\t\t";
-		myFile << fixed << setprecision(2) << "$" << customer_record.total_cost << endl;
-
-		myFile.close();
-	}
-	else {
-		cout << "Error!";
-	}
+void Output(const call_record & customer_record, ofstream & myFile) {
 	
 	cout << customer_record.cell_number << "\t";
 	cout << fixed << setprecision(0) << customer_record.relays << "\t";
@@ -111,4 +110,11 @@ void Output(const call_record & customer_record) {
 	cout << fixed << setprecision(2) << "$" << customer_record.call_tax << "\t\t";
 	cout << fixed << setprecision(2) << "$" << customer_record.total_cost << endl;
 	
+	myFile << customer_record.cell_number << "\t";
+	myFile << fixed << setprecision(0) << customer_record.relays << "\t";
+	myFile << fixed << setprecision(0) << customer_record.call_length << "\t\t";
+	myFile << fixed << setprecision(2) <<customer_record.net_cost << "\t\t";
+	myFile << fixed << setprecision(2) <<customer_record.tax_rate << "\t\t";
+	myFile << fixed << setprecision(2) <<customer_record.call_tax << "\t\t";
+	myFile << fixed << setprecision(2) <<customer_record.total_cost << endl;
 }
