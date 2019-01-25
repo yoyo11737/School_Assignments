@@ -16,9 +16,13 @@
 void main(void) {
     SYSTEM_Initialize();
     while(1) {
+    
     LED0_Toggle(); 
+    __delay_ms(500);
     LED1_Toggle();
+    __delay_ms(500);
     LED2_Toggle();
+    __delay_ms(500);
     LED3_Toggle();
     __delay_ms(500);
     }
