@@ -41,3 +41,21 @@
 #ROW_ONE_SPECIAL{
 	empty-cells: show;
 }
+/*Classes*/
+.H img {
+	display:none;
+}
+.H:hover img {
+	position: absolute; 
+	top:450px; 
+	left:10px; 
+	width:87px; 
+	height:117px;
+	display:block;
+}
+.HE img {
+	display:none;
+}
+.HE:hover img {
+	display:block;
+}
