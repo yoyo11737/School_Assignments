@@ -19891,13 +19891,6 @@ void main(void) {
     SYSTEM_Initialize();
     while(1) {
 
-    do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
-    _delay((unsigned long)((500)*(1000000/4000.0)));
-    do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
-    _delay((unsigned long)((500)*(1000000/4000.0)));
-    do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
-    _delay((unsigned long)((500)*(1000000/4000.0)));
-    do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0);
-    _delay((unsigned long)((500)*(1000000/4000.0)));
+        printf("Hello Again");
     }
 }

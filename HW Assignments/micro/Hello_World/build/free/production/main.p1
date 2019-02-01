@@ -3,21 +3,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 68: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"783 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h: 783:     struct {
-[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S47 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"782
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h: 782: typedef union {
-[u S46 `S47 1 ]
-[n S46 . . ]
-"794
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h: 794: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
-[v _LATAbits `VS46 ~T0 @X0 0 e@22 ]
-[v F11682 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF11682 ~T0 @X0 0 e ]
-[p i __delay ]
+"20 main.c
+[; ;main.c: 20:         printf("Hello Again");
+[v _printf `(i ~T0 @X0 0 e? ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f18855.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1587,52 +1575,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1570 ]
 {
 "20
-[; ;main.c: 20:     do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0);
-[e :U 1574 ]
-{
-[e = . . _LATAbits 0 0 -> ~ -> . . _LATAbits 0 0 `i `uc ]
-}
-[e :U 1573 ]
+[; ;main.c: 20:         printf("Hello Again");
+[e ( _printf :s 1C ]
 "21
-[; ;main.c: 21:     _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"22
-[; ;main.c: 22:     do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0);
-[e :U 1577 ]
-{
-[e = . . _LATAbits 0 1 -> ~ -> . . _LATAbits 0 1 `i `uc ]
-}
-[e :U 1576 ]
-"23
-[; ;main.c: 23:     _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"24
-[; ;main.c: 24:     do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
-[e :U 1580 ]
-{
-[e = . . _LATAbits 0 2 -> ~ -> . . _LATAbits 0 2 `i `uc ]
-}
-[e :U 1579 ]
-"25
-[; ;main.c: 25:     _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"26
-[; ;main.c: 26:     do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0);
-[e :U 1583 ]
-{
-[e = . . _LATAbits 0 3 -> ~ -> . . _LATAbits 0 3 `i `uc ]
-}
-[e :U 1582 ]
-"27
-[; ;main.c: 27:     _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"28
-[; ;main.c: 28:     }
+[; ;main.c: 21:     }
 }
 [e :U 1569 ]
 [e $U 1570  ]
 [e :U 1571 ]
-"29
-[; ;main.c: 29: }
+"22
+[; ;main.c: 22: }
 [e :UE 1568 ]
 }
+[a 1C 72 101 108 108 111 32 65 103 97 105 110 0 ]
