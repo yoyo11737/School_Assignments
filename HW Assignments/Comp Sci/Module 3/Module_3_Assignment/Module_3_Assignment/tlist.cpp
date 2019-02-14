@@ -32,6 +32,7 @@ Tlist::~Tlist()
 {
 	cout << "Destructor Invoked" << endl;
 	delete[] DB;
+	Is_Empty();
 	DB = 0;
 
 }
