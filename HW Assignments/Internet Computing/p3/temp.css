@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+ul li {
+  float: left;
+  display: block;
+  width: 245spx;
+  text-align: center;
+}

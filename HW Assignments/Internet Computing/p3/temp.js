@@ -1,19 +1,35 @@
-var total = 0;
+/*
+Dalton McClain
+Intr. Internet Comp.
+COP 3813
+Project 3
 
-var report = function (first, last, total) {
+JAVASCRIPT
+*/
+
+var reportPlus = function (first, last, total) {
     document.getElementById("result").innerHTML =
         
-		first + last + " = " + total;
+		parseInt(first) + " + " + parseInt(last) + " = " + parseInt(total);
 };
 
-document.getElementById("plus").onclick = function () {
-    var f = document.getElementById("first_box").value;
-	var l = document.getElementById("last_box").value;
-	total = f + l;
-	report(f, l, total);
+var reportMinus = function (first, last, total) {
+    document.getElementById("result").innerHTML =
+        
+		parseInt(first) + " - " + parseInt(last) + " = " + parseInt(total);
 };
 
-document.getElementById("minus").onclick = function () {
-    var m = document.getElementById("last_box").value;
-    
+document.getElementById("equals").onclick = function () {
+	if(document.getElementById("plus").checked == true){
+		var f = document.getElementById("first_box").value;	
+		var l = document.getElementById("last_box").value;
+		var total = parseInt(f) + parseInt(l);
+		reportPlus(f, l, total);
+	} 
+	else if(document.getElementById("minus").checked == true){
+		var f = document.getElementById("first_box").value;
+		var l = document.getElementById("last_box").value;
+		var total = parseInt(f) - parseInt(l);
+		reportMinus(f, l, total);
+	}
 };

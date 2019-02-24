@@ -1,19 +1,33 @@
+<!--
+Dalton McClain
+Intr. Internet Comp.
+COP 3813
+Project 3
+
+HTML
+-->
+
 <!doctype html>
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <title>JavaScript Temperature Converter</title>
+    <title>JavaScript Testing by Dalton</title>
+	<link rel ="stylesheet" href="temp.css">
   </head>
   <body>
-    <h1>Temperature Conversion</h1>
-    <p>
+    <h1 align="center" >Simple Two Number Calculator</h1>
+    <p align="center">
       <input type="text" id="first_box" />
-      <input type="button" id="plus" value=" + " />
-      <input type="button" id="minus" value=" - " />
+		<form>
+			<ul>
+			  <li><input type="radio" id="plus" name="suite" value=" + " /><label for="plus">+</label></li>
+			  <li><input type="radio" id="minus" name="suite" value=" - " /><label for="minus">-</label></li>
+			</ul>
+		</form>
 	  <input type="text" id="last_box" />
-	  <p id="result"></p>
+	  <input type="button" id="equals" value=" = " />
+	  <p align="center" id="result"></p>
     </p>
-    <p id="result"></p>
-    <script src="temperature.js"></script>
+    <script src="temp.js"></script>
   </body>
 </html>
