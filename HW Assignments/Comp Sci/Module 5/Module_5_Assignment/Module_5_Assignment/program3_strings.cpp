@@ -1,3 +1,15 @@
+/*
+Name: Dalton McClain
+Course: COP3530
+Professor: Dr. Lofton Bullard
+Due Date: 2/14/19
+Total Points: 25
+Assignment #5: String Manipulation
+
+Description: This program does two things, 1: It allows a user to check if a string is a palindrome or not.
+										   2: It allows users to enter a string and then find and replace certain parts of said string.
+
+*/
 #include <iostream>
 #include <string>
 
@@ -59,6 +71,7 @@ int main() {
 
 }
 
+//This function takes a string that the user enters and checks the string to see if it is a palindrome or not.
 bool palindrome(const string & s)
 {
 	
@@ -73,25 +86,26 @@ bool palindrome(const string & s)
 	}
 
 	if (s1 == s2) {
-		cout << "TRUE!";
+		cout << s << " is a palindrome!" << endl;
 		return true;
 	}
 	else {
-		cout << "FALSE!";
+		cout << s << " is not a palindrome!" << endl;
 		return false;
 	}
 
 }
 
+//This function takes three variables that the user enters. The function finds and replaces user defined data.
 string replace_all(string & original_string, const string & old_substring, const string & new_substring)
 {
 	int pos = 0;
 	int old_substring_length = old_substring.length();
 	//string finalString = original_string;
 
-	while (original_string.find_first_of(old_substring) != string::npos) {
+	while (original_string.find(old_substring) != -1) {
 		
-		pos = original_string.find_first_of(old_substring);
+		pos = original_string.find(old_substring);
 
 		original_string.replace(pos, old_substring_length, new_substring);
 
