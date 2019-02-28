@@ -1,15 +1,6 @@
-ul {
-  list-style: none;
-  display: block;
+div {
+	text-align:center;
 }
-
-label {
-  display: block;
-}
-
-ul li {
-  float: left;
-  display: block;
-  width: 245spx;
-  text-align: center;
+body {
+	background-color: FloralWhite;
 }
