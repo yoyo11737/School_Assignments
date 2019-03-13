@@ -223,6 +223,7 @@ a.show{
 
 /* form example */
 #newItemButton {padding: 10px 20px 75px 20px; display: none;}
+#removeItemButton {padding: 10px 20px 75px 20px; display: none;}
 #newItemForm {padding-top: 20px;}
 #itemDescription {width: 360px;}
 #newItemForm input[type='submit'] {margin-top: 0; text-align: left;}
