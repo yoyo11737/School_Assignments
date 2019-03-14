@@ -4,7 +4,7 @@
 
 using namespace std;
 
-typedef char stack_element;
+typedef string stack_element;
 
 class stack_node {
 public: 
@@ -18,7 +18,7 @@ public:
 	~stack();
 	stack(const stack &);
 	stack_element top();
-	void pop();
+	string pop();
 	void push(const stack_element &);
 	void print();
 private:

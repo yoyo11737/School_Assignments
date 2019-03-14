@@ -37,16 +37,17 @@ stack_element stack::top()
 	}
 }
 
-void stack::pop()
+string stack::pop()
 {
 	//cout << "Inside pop" << endl;
 	stack_node * p;
-
-	if (s_top != 0) {
-		p = s_top;
-		s_top = s_top->next;
-		delete p;
-	}
+	if (s_top == 0) return "empty";
+	p = s_top;
+	string final = p->data;
+	s_top = s_top->next;
+	delete p;
+	return final;
+	
 }
 
 void stack::push(const stack_element & item)
