@@ -1,3 +1,12 @@
+/*
+Dalton McClain
+3/14/19
+Module 7 Assignment
+Points: 25
+
+Description: This program accepts a users choice of postfix expressions and converts them into infix expressions.
+*/
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
@@ -21,13 +30,13 @@ int main() {
 			if (c == "+" || c == "-" || c == "*" || c == "/") {
 				op2 = s.pop();
 				if (op2 == "empty") {
-					cout << "Too many operators!" << endl;
+					cout << "too many operators and not enough operands" << endl;
 					error = 1;
 					break;
 				}
 				op1 = s.pop();
 				if (op1 == "empty") {
-					cout << "Too many operators!" << endl;
+					cout << "too many operators and not enough operands" << endl;
 					error = 1;
 					break;
 				}
@@ -48,7 +57,7 @@ int main() {
 				cout << "The infix conversion is: " << inFix << endl << endl;
 			}
 			else {
-				cout << "Too many operators!" << endl;
+				cout << "too many operands and not enough operators" << endl;
 				while (s.pop() != "empty") s.pop();
 			}
 		}

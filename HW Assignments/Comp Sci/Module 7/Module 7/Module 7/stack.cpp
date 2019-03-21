@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//This function empties the stack.
 stack::~stack()
 {
 	//cout << "Inside !stack" << endl;
@@ -12,6 +13,7 @@ stack::~stack()
 	}
 }
 
+//This function is the copy constructor, which goes unused in this program.
 stack::stack(const stack & Org)
 {
 	//cout << "Inside the Copy Constructor" << endl;
@@ -25,6 +27,7 @@ stack::stack(const stack & Org)
 	}
 }
 
+//This function pushes the the top item on the stack into the pointer that stores the data
 stack_element stack::top()
 {
 	//cout << "Inside top" << endl;
@@ -37,6 +40,7 @@ stack_element stack::top()
 	}
 }
 
+//This function pops the item that is on top of the stack out of the stack
 string stack::pop()
 {
 	//cout << "Inside pop" << endl;
@@ -50,6 +54,7 @@ string stack::pop()
 	
 }
 
+//This function allows the stack to be populated with the required information
 void stack::push(const stack_element & item)
 {
 	//cout << "Inside push" << endl;
@@ -60,6 +65,7 @@ void stack::push(const stack_element & item)
 	s_top = p;
 }
 
+//This function prints the items of the stack
 void stack::print()
 {
 	//cout << "Inside print" << endl;
