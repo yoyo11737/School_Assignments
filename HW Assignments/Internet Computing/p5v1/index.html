@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+html{
+background-image: url("cash.jpg");
+}
+</style>
+<head>
+<title>PHP Currency Converter</title>
+<link rel="stylesheet" href="style.css">
+<h1 id="title">PHP Currency Converter</h1>
+</head>
+
+<body>
+<form action="default.php" class="choices" method="post">
+convert
+<input type="text" name="Amount">
+<select>
+  <option value="USD" id="from_USD">USD</option>
+  <option value="EUR" id="from_EUR">EUR</option>
+</select>
+to
+<select>
+  <option value="USD" id="to_USD">USD</option>
+  <option value="EUR" id="to_EUR">EUR</option>
+</select>
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

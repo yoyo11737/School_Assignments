@@ -1,0 +1,20 @@
+head{
+	font-family: Arial;
+}
+body{
+	background-image: url("cash.png");
+	background-size: cover;
+	font-family: Arial;
+}
+
+#title{
+	text-align: center;
+}
+
+.choices{
+	text-align: center;
+}
+footer{
+	text-align: center;
+	font-family: Arial;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PHP Currency Converter</title>
+<link rel="stylesheet" href="style.css">
+<h1 id="title">PHP Currency Converter</h1>
+</head>
+
+<body>
+<form action="default.php" class="choices" method="post">
+<input type="text" name="Amount" placeholder="Amount to convert">
+<select name="from">
+  <option value="EUR">EUR</option>
+</select>
+to
+<select name="to">
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+  <option value="AUD">AUD</option>
+  <option value="CAD">CAD</option>
+  <option value="INR">INR</option>
+</select>
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+
+<footer>
+<h5>Due to the fact that this is a free API, the conversions are limited only from EUR.</h5>
+</footer>
+
+</html>
